@@ -8,7 +8,7 @@ public class Employer {
     private String value;
 
     public Employer() {
-        id = nextId;
+        this.id = nextId;
         nextId++;
     }
 
@@ -21,7 +21,7 @@ public class Employer {
 
     @Override
     public String toString() {
-        return value;
+        return this.value;
     }
 
     @Override

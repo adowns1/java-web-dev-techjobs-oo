@@ -8,8 +8,12 @@ public class Location {
     private String value;
 
     public Location() {
-        id = nextId;
+        this.id = nextId;
         nextId++;
+    }
+    public Location (String tofu){
+        this();
+        this.value = tofu;
     }
 
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
@@ -20,7 +24,7 @@ public class Location {
 
     @Override
     public String toString() {
-        return value;
+        return this.value;
     }
 
     @Override
