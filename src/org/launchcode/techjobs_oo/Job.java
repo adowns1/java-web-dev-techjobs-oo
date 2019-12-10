@@ -33,10 +33,13 @@ public class Job {
 
     @Override
     public String toString() {
-        if (this.getName().contains(" ") || this.getEmployer().getValue().contains(" ") || this.getLocation().getValue().contains(" ")|| this.getPositionType().getValue().contains(" ") || this.getCoreCompetency().getValue().contains(" ")){
-            System.out.println("Data not available");
-        }
-    return "\nID: " +this.getId()+ "\nName: " +this.getName()+ "\nEmployer: " +this.getEmployer().getValue()+ "\nLocation: " +this.getLocation().getValue()+ "\nPosition Type: " +this.getPositionType().getValue()+ "\nCore Competencies: " +this.getCoreCompetency().getValue()+ "\n";
+
+    return "\nID: " +this.getId()
+            + "\nName: " + ((name==null || name.isEmpty() || name.isBlank()) ? "Data not available" : name)
+            + "\nEmployer: " +((employer==null) ? "Data not available" : employer)
+            + "\nLocation: " +((location==null) ? "Data not available" : location)
+            + "\nPosition Type: " +((positionType==null) ? "Data not available" : positionType)
+            + "\nCore Competencies: " +((coreCompetency==null) ? "Data not available" : coreCompetency)+ "\n";
     }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID

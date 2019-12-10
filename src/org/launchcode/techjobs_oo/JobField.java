@@ -12,7 +12,9 @@ public abstract class JobField {
     }
     public JobField (String value){
         this();
-        this.value = value;
+        if((value.isEmpty()||value.isBlank())){
+            this.value = value;
+        }
     }
     @Override
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
@@ -29,7 +31,8 @@ public abstract class JobField {
 
     @Override
     public String toString() {
-        return value;
+        if(value==null){ return "Data not available"; }
+        else { return value; }
     }
 
     public int getId() {
@@ -41,6 +44,8 @@ public abstract class JobField {
     }
 
     public void setValue(String value) {
-        this.value = value;
+        if (!(value.isBlank()||value.isEmpty())){
+            this.value = value;
+        }
     }
 }

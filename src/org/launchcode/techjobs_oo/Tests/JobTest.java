@@ -70,7 +70,7 @@ public class JobTest {
     @Test
     public void testEmptyField () {
         String errorMessage = "Data not available";
-        emptyFieldObj.toString().compareTo(errorMessage);
+        objectOne.toString().compareTo(errorMessage);
     }
 
 }
